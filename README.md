@@ -2,3 +2,6 @@
 Figuring this out
 
 I am really bad at this coding stuff and have stolen most of what I am currently using.  I am trying to learn and make all of this work niceley and would really like some help.
+
+
+I want to just run mcp.js and have everything else run
