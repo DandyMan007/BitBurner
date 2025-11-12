@@ -22,3 +22,15 @@ export function getTopTargets(ns, servers, count = 3, player = ns.getPlayer()) {
         .slice(0, count)
         .map(entry => entry.server);
 }
+
+/**
+ * Returns scored targets excluding any in the `exclude` list.
+ * @param {NS} ns
+ * @param {string[]} servers
+ * @param {string[]} exclude
+ * @param {Player} player
+ */
+export function getFilteredTargets(ns, servers, exclude = [], player = ns.getPlayer()) {
+    return getScoredTargets(ns, servers, player)
+        .filter(entry => !exclude.includes(entry.server));
+}
